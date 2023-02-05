@@ -1,0 +1,94 @@
+@use "colors-dark";
+@use "colors-light";
+
+.skills_container {
+    margin-top: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+// ----------- DARK ----------------------------------------------------------------
+
+.dark_skills_list {
+    max-width: 450px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & li {
+        color: colors-dark.$hover-color;
+        text-transform: initial;
+        background-color: #2a2f4c;
+        box-shadow: colors-dark.$shadow-color;
+        border: 0;
+        display: block;
+        padding: 0.8em 1.4em;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: lowercase;
+        margin: 0.5em;
+        &:hover {
+            transform: translateY(-4px);
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+    & ul {
+        list-style-type: none;
+        margin: 0.5em;
+    }
+}
+
+.dark_title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: colors-dark.$text-color;
+}
+
+// ----------- LIGHT ----------------------------------------------------------------
+
+.light_skills_list {
+    max-width: 450px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & li {
+        color: colors-light.$text-color;
+        text-transform: initial;
+        background-color: colors-light.$skills-color;
+        box-shadow: colors-light.$skills-border-color;
+        border: 0;
+        display: block;
+        padding: 0.8em 1.4em;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: lowercase;
+        margin: 0.5em;
+        &:hover {
+            transform: translateY(-4px);
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+    & ul {
+        list-style-type: none;
+        margin: 0.5em;
+    }
+}
+
+
+.light_title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: colors-light.$text-color;
+}

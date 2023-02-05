@@ -1,0 +1,18 @@
+@use 'colors-light';
+@use 'colors-dark';
+
+.light_scroll_top {
+    position: fixed;
+    bottom: 2em;
+    right: 4em;
+    background-color: transparent;
+    color: colors-light.$name-color
+  }
+  
+.dark_scroll_top {
+    position: fixed;
+    bottom: 2em;
+    right: 4em;
+    background-color: transparent;
+    color: colors-dark.$name-color
+}

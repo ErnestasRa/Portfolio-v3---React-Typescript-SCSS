@@ -1,0 +1,158 @@
+@use "colors-dark";
+@use 'colors-light';
+
+// --------------- DARK
+
+.dark_about_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3em;
+
+    & h1 {
+        font-size: 4rem;
+    } 
+
+    & h1, h2, h3, h4 {
+        line-height: 1.2;
+        color: colors-dark.$text-color;
+    }
+
+    & h2 {
+        color: colors-dark.$text-color;
+        margin-top: 1.2em;
+        font-size: 2rem;;
+    }
+
+    & p {
+        color: colors-dark.$text-color;
+        margin-top: 2.4em;
+        font-size: 1rem;
+        max-width: 600px;
+    }
+}
+
+.dark_name_color {
+    color: colors-dark.$name-color
+}
+
+.dark_about_contacts {
+        display: flex;
+        align-items: center;
+        margin-top: 2.4em;
+        gap: 20px;
+        & a {
+            text-decoration: none;
+            color: colors-dark.$text-color;
+            text-transform: lowercase;
+            font-weight: 500;
+            display: inline-block;
+            position: relative;
+            &:hover {
+                color: colors-dark.$name-color;
+            }
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                bottom: 0;
+                height: 2px;
+                margin: -5px 0;
+                left: 0;
+                background-color: colors-dark.$name-color;
+                transition: all 0.2s ease-in 0s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+}
+
+.dark_contact_icon {
+    font-size: 2rem;
+    color: colors-dark.$text-color;
+    &:hover {
+        color: colors-dark.$name-color
+    }
+}
+
+// ----------------------- LIGHT 
+
+.light_about_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3em;
+
+    & h1 {
+        font-size: 4rem;
+    } 
+
+    & h1, h2, h3, h4 {
+        line-height: 1.2;
+        color: colors-light.$text-color;
+    }
+
+    & p {
+        margin-top: 2.4em;
+        color: colors-light.$text-color;
+    }     
+
+    & h2 {
+        color: colors-light.$text-color;
+        margin-top: 1.2em;
+        font-size: 2rem;
+        margin-top: 1.2em;
+    }
+}
+
+
+.light_name_color {
+    color: colors-light.$name-color
+}
+
+.light_about_contacts {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4em;
+    gap: 20px;
+    & a {
+        text-decoration: none;
+        color: colors-dark.$text-color;
+        text-transform: lowercase;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: colors-light.$name-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 2px;
+            margin: -5px 0;
+            left: 0;
+            background-color: colors-light.$name-color;
+            transition: all 0.2s ease-in 0s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+.light_contact_icon {
+    font-size: 2rem;
+    color: colors-light.$text-color;
+    &:hover {
+        color: colors-light.$name-color
+    }
+}
+
+.icon_size {
+    font-size: 2rem;
+}

@@ -1,0 +1,132 @@
+@use "colors-dark";
+@use "colors-light";
+
+// ----------- DARK ----------------------------------------------------------------
+
+.dark_navbar{
+    height: 8em;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    a {
+        text-decoration: none;
+        color: colors-dark.$text-color;
+        text-transform: lowercase;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: colors-dark.$hover-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 2px;
+            margin: -5px 0;
+            left: 0;
+            background-color: colors-dark.$hover-color;
+            transition: all 0.2s ease-in 0s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin-right: 1.5em;
+        display: flex;
+    }
+    li {
+        margin-left: 1.5em;
+        & button {
+            cursor: pointer;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+  
+
+}
+
+.dark_icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: colors-dark.$text-color;
+}
+
+// ----------- LIGHT ----------------------------------------------------------------
+
+.light_navbar {
+    height: 8em;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    list-style: none;
+    a {
+        text-decoration: none;
+        color: colors-light.$text-color;
+        text-transform: lowercase;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: colors-light.$hover-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 2px;
+            margin: -5px 0;
+            left: 0;
+            background-color: colors-light.$hover-color;
+            transition: all 0.2s ease-in 0s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin-right: 1.5em;
+        display: flex;
+    }
+
+    li {
+        margin-left: 1.5em;
+        & button {
+            cursor: pointer;
+        }
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+ 
+}
+
+.light_icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: colors-light.$name-color;
+}

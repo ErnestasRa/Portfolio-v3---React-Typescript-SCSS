@@ -1,0 +1,188 @@
+@use "colors-dark";
+@use "colors-light";
+
+.projects_section {
+    margin-top: 5em;
+}
+
+.projects_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18em,1fr));
+    grid-gap: 2em;
+
+    & .title {
+            text-align: center;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+    }
+}
+
+
+// ----------- DARK ----------------------------------------------------------------
+
+.dark_single_project {
+        padding: 2em;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: colors-dark.$shadow-color;
+        transition: transform 0.2s linear;
+        & h3{
+            color: colors-dark.$text-color;
+            font-size: 1.5rem;
+        }
+        & p {
+            margin-top: 1em;
+            color: colors-dark.$text-color;
+            font-size: 1rem;
+        }
+        &:hover {
+            transform: translateY(-7px);
+        }
+}
+
+.dark_projects_section_title {
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: colors-dark.$text-color;
+}
+
+.dark_stack_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+    list-style: none;
+    & li {
+        color: colors-dark.$text-color;
+        margin: .5em;
+        font-weight: 500;
+        font-size: .8rem;
+    }
+}
+
+.dark_project_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.4em;
+    gap: 20px;
+    & a {
+        text-decoration: none;
+        color: colors-dark.$text-color;
+        text-transform: lowercase;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: colors-dark.$hover-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 2px;
+            margin: -5px 0;
+            left: 0;
+            background-color: colors-dark.$hover-color;
+            transition: all 0.2s ease-in 0s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+
+
+// ----------- Light ----------------------------------------------------------------
+
+.light_single_project {
+    padding: 2em;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: colors-light.$shadow-color;
+    transition: transform 0.2s linear;
+    & h3{
+        color: colors-light.$text-color;
+        font-size: 1.5rem;
+    }
+    & p {
+        margin-top: 1em;
+        color: colors-light.$text-color;
+        font-size: 1rem;
+    }
+    &:hover {
+        transform: translateY(-7px);
+    }
+}
+
+.light_projects_section_title {
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: colors-light.$text-color;
+}
+
+.light_stack_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+    list-style: none;
+    & li {
+        color: colors-light.$text-color;
+        margin: .5em;
+        font-weight: 500;
+        font-size: .8rem;
+    }
+}
+
+.light_project_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.4em;
+    gap: 20px;
+    & a {
+        text-decoration: none;
+        color: colors-light.$text-color;
+        text-transform: lowercase;
+        font-weight: 500;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            color: colors-light.$hover-color;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            bottom: 0;
+            height: 2px;
+            margin: -5px 0;
+            left: 0;
+            background-color: colors-light.$hover-color;
+            transition: all 0.2s ease-in 0s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .light_single_project {
+        margin: 20px;
+    }
+
+    .dark_single_project {
+        margin: 20px;
+    }
+  }

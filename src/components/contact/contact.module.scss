@@ -1,0 +1,108 @@
+@use "colors-dark";
+@use 'colors-light';
+//---------------------DARK-----------------
+
+.dark_contact_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    justify-content: center;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        color: colors-dark.$text-color
+    }
+    & a {
+        text-decoration: none;
+    }
+
+    & .btn {
+        display: block;
+        cursor: pointer;
+        padding: 0.8em 1.4em;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: lowercase;
+        transition: transform 0.2s ease-in-out;
+        color: colors-dark.$primary;
+        border: 2px solid colors-dark.$primary;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:hover{
+            color: colors-dark.$bgcolor;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            background-color: colors-dark.$primary;
+            right: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: right 0.2s ease-in-out;
+        }
+        &:hover:before,
+        :focus:before {
+            right: 0
+        }
+    }
+}
+
+//------------------------LIGHT-------------------
+
+
+.light_contact_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    justify-content: center;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        color: colors-light.$text-color
+    }
+    & a {
+        text-decoration: none;
+    }
+
+    & .btn {
+        display: block;
+        cursor: pointer;
+        padding: 0.8em 1.4em;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: lowercase;
+        transition: transform 0.2s ease-in-out;
+        color: colors-light.$primary;
+        border: 2px solid colors-light.$primary;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:hover{
+            color: colors-light.$bgcolor;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            background-color: colors-light.$primary;
+            right: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: right 0.2s ease-in-out;
+        }
+        &:hover:before,
+        :focus:before {
+            right: 0
+        }
+    }
+}
